@@ -1,6 +1,4 @@
-Write your reflection here.
+# The biggest thing that I learned in this assignment is how Streamlit scripts are not a program that runs once. It re-runs from top to bottom after every interaction, and once I was able to grasp that I did well on the assignment.
 
-See reflection.md for what makes a good reflection — be specific, use the
-terminology from this assignment (rerun, widget, return value, guard, bytes vs.
-text, decode, session state, initialise once, button-triggered, metric), and make
-it actionable.
+#In Part 1 when creating one_package.py I learned how to use guards in streamlit files as well as how to use the parser to read docstrings instead of code. In part 2 (process_file.py) I made my first main mistake. My app crashed on the first load with "AttributeError: 'NoneType' object has no attribute 'name'". The uploader returns None until a file is chosen, and my guard was correct, but the lines that built the JSON path, wrote the file, and showed st.success were at the left margin, so they ran outside the guard on every run. When I fixed the first two, I left st.success outside, which would have caused a NameError because packages and json_path never existed. The lesson is that a guard only protects code that is actually indented under it and I will remember that from now on.
+# For the next class I want to work on checking my work before I run it to catch any simple errors that I could have made while coding, specifically any guards I decide to write in.
