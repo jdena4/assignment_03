@@ -16,7 +16,6 @@ Test it: pytest tests/test_streamlit.py -k one_package
 
 import streamlit as st
 
-import streamlit as st
 from packaging_parser import calc_total_units, get_unit, parse_packaging
 
 
